@@ -1,13 +1,8 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * times_table - a function that prints the 9 times table,
- *
- * Return: void
- *
  */
-
 void times_table(void)
 {
 	int x;
@@ -19,7 +14,9 @@ void times_table(void)
 		for (y = 0 ; y <= 9 ; y++)
 		{
 			m = x * y;
-			if (m <= 9 && y != 0)
+			if (y == 0)
+				_putchar(m + '0');
+			else if (m <= 9)
 			{
 				_putchar(' ');
 				_putchar(m + '0');
