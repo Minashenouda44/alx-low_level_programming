@@ -20,17 +20,20 @@ void times_table(void)
 		for (y = 0 ; y <= 9 ; y++)
 		{
 			m = x * y;
-
-			_putchar(m / 10 + '0');
-			_putchar(m % 10 + '0');
-
-			if (y == 9)
-				_putchar('\n');
-			else
+			if (m <= 9)
 			{
+				_putchar(m + '0');
 				_putchar(',');
 				_putchar(' ');
 			}
+			else
+			{
+				_putchar(m / 10 + '0');
+				_putchar(m % 10 + '0');
+				_putchar(',');
+				_putchar(' ');
+			}
+			_putchar('\n');
 		}
 	}
 }
