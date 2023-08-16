@@ -29,7 +29,19 @@ int main(void)
 		f = s;
 		s = next;
 
-		printf("%d", next);
+		_putchar((next / 100000000000) % 10 + '0');
+		_putchar((next / 10000000000) % 10 + '0');
+		_putchar((next / 1000000000) % 10 + '0');
+		_putchar((next / 100000000) % 10 + '0');
+		_putchar((next / 10000000) % 10 + '0');
+		_putchar((next / 1000000) % 10 + '0');
+		_putchar((next / 100000) % 10 + '0');
+		_putchar((next / 10000) % 10 + '0');
+		_putchar((next / 1000) % 10 + '0');
+		_putchar((next / 100) % 10 + '0');
+		_putchar((next / 10) % 10 + '0');
+		_putchar((next / 1) % 10 + '0');
+		_putchar('\n');
 	}
 
 	_putchar('\n');
