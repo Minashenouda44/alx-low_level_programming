@@ -18,13 +18,13 @@ int main(void)
 			s += i;
 	}
 
-	_putchar(' ');
 	_putchar((s / 100000) % 10 + '0');
 	_putchar((s / 10000) % 10 + '0');
 	_putchar((s / 1000) % 10 + '0');
 	_putchar((s / 100) % 10 + '0');
 	_putchar((s / 10) % 10 + '0');
 	_putchar((s / 1) % 10 + '0');
+	_putchar('\n');
 
 	return (0);
 }
