@@ -18,7 +18,8 @@ int main(void)
 			s += i;
 	}
 
-	_putchar(s + '0');
+	_putchar(s / 10 + '0');
+	_putchar(s % 10 + '0');
 
 	return (0);
 }
