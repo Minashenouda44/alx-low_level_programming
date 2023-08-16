@@ -28,23 +28,8 @@ int main(void)
 		f = s;
 		s = next;
 
-		int divisor;
-		int d;
 
-		divisor = 1;
-
-		while (next / divisor >= 10)
-		{
-			divisor *= 10;
-		}
-
-		while (divisor > 0)
-		{
-			d = (next / divisor) % 10;
-
-			_putchar(d + '0');
-			divisor /= 10;
-		}
+		_putchar(next + '0');
 	}
 
 	_putchar('\n');
