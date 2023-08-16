@@ -29,7 +29,7 @@ int main(void)
 		f = s;
 		s = next;
 
-		_putchar(next + '0');
+		printf("%d", next);
 	}
 
 	_putchar('\n');
