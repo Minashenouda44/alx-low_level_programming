@@ -24,33 +24,32 @@ void print_times_table(int n)
 			{
 				m = i * j;
 				if (j == 0)
-					_putchar(m);
-				if (m <= 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
 					_putchar(m + '0');
-				}
-				else if (m <= 99)
-				{
-					_putchar(' ');
-					_putchar(m / 10 + '0');
-					_putchar(m % 10 + '0');
-				}
 				else
-				{
-					_putchar(m / 100 + '0');
-					_putchar(m / 10 + '0');
-					_putchar(m % 10 + '0');
-				}
-				if (j < n)
 				{
 					_putchar(',');
 					_putchar(' ');
+					if (m <= 9)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(m + '0');
+					}
+					else if (m <= 99)
+					{
+						_putchar(' ');
+						_putchar(m / 10 + '0');
+						_putchar(m % 10 + '0');
+					}
+					else
+					{
+						_putchar(m / 100 + '0');
+						_putchar((m / 10) % 10 + '0');
+						_putchar(m % 10 + '0');
+					}
 				}
 			}
 			_putchar('\n');
 		}
 	}
-
 }
