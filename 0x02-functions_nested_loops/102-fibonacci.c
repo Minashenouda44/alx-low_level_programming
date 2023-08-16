@@ -38,7 +38,7 @@ int main(void)
 
 		while (divisor > 0)
 		{
-			int d = (next / divisor) % 10;
+			d = (next / divisor) % 10;
 
 			_putchar(d + '0');
 			divisor /= 10;
