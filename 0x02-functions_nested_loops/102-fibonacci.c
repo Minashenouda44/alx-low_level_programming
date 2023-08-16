@@ -15,10 +15,10 @@ int main(void)
 	int s = 2;
 	int next = 0;
 
-	_putchar(f);
+	_putchar(f + '0');
 	_putchar(',');
 	_putchar(' ');
-	_putchar(s);
+	_putchar(s + '0');
 
 	for (i = 2 ; i < 50 ; i++)
 	{
@@ -29,7 +29,7 @@ int main(void)
 		f = s;
 		s = next;
 
-		_putchar(next);
+		_putchar(next + '0');
 	}
 
 	_putchar('\n');
