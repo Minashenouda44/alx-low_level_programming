@@ -24,28 +24,28 @@ int main(void)
 	{
 		_putchar(',');
 		_putchar(' ');
-
 		next = f + s;
 		f = s;
 		s = next;
+		int divisor = 1;
 
-		_putchar((next / 100000000000) % 10 + '0');
-		_putchar((next / 10000000000) % 10 + '0');
-		_putchar((next / 1000000000) % 10 + '0');
-		_putchar((next / 100000000) % 10 + '0');
-		_putchar((next / 10000000) % 10 + '0');
-		_putchar((next / 1000000) % 10 + '0');
-		_putchar((next / 100000) % 10 + '0');
-		_putchar((next / 10000) % 10 + '0');
-		_putchar((next / 1000) % 10 + '0');
-		_putchar((next / 100) % 10 + '0');
-		_putchar((next / 10) % 10 + '0');
-		_putchar((next / 1) % 10 + '0');
-		_putchar('\n');
+		int d;
+
+		while (next / divisor >= 10)
+		{
+			divisor *= 10;
+		}
+
+		while (divisor > 0)
+		{
+			int d = (next / divisor) % 10;
+
+			_putchar(d + '0');
+			divisor /= 10;
+		}
 	}
 
 	_putchar('\n');
-
 	return (0);
 }
 
