@@ -27,9 +27,11 @@ int main(void)
 		next = f + s;
 		f = s;
 		s = next;
-		int divisor = 1;
 
+		int divisor;
 		int d;
+
+		divisor = 1;
 
 		while (next / divisor >= 10)
 		{
