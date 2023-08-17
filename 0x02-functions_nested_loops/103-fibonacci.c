@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	int i;
 	unsigned long f = 0, s = 1, n, es;
 
 	while (es <= 4000000)
