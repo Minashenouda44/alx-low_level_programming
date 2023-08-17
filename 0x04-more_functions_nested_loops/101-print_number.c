@@ -8,30 +8,19 @@
 
 void print_number(int n)
 {
-	if (n == 0)
-		_putchar(n + '0');
-	else if (n <= 9 || n >= -9)
+	unsigned int no;
+
+	if (no < 0)
+
 	{
-		_putchar((n / 1) % 10 + '0');
-	}
-	else if (n <= 99 || n >= -99)
-	{
-		_putchar((n / 10) % 10 + '0');
-		_putchar((n / 1) % 10 + '0');
-	}
-	else if (n <= 999 || n >= -999)
-	{
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar((n / 1) % 10 + '0');
-	}
-	else if (n <= 9999 || n >= -9999)
-	{
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar((n / 1) % 10 + '0');
+		_putchar('-');
+		n = -n;
 	}
 
-	_putchar('\n');
+	if ((no / 10) > 0)
+	{
+		print_number(no / 10);
+	}
+
+	_putchar((no % 10) + '0');
 }
