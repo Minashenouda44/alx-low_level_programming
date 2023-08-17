@@ -9,15 +9,15 @@
 int main(void)
 {
 	int i;
-	long long f = 1, s = 2, n = 0;
+	unsigned long f = 1, s = 2, n = 0;
 
-	printf("%lld, %lld, ", f, s);
+	printf("%lu, %lu, ", f, s);
 
 	for (i = 2 ; i < 98 ; i++)
 	{
 		n = f + s;
 
-		printf("%lld", n);
+		printf("%lu", n);
 
 		f = s;
 		s = n;
