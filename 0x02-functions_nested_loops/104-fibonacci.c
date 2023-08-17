@@ -19,8 +19,9 @@ int main(void)
 
 		printf("%ld", n);
 
-		s = n;
 		f = s;
+		s = n;
+
 		if (i < 97)
 			printf(", ");
 	}
