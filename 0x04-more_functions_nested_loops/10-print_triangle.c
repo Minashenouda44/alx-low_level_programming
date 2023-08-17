@@ -14,17 +14,26 @@ void print_triangle(int size)
 	}
 	else
 	{
-		int x;
-		int y;
+		int r;
+		int space;
+		int hash;
+		int i;
 
-		for (x = 0 ; x < size ; x++)
+		for (r = 1 ; r <= size ; r++)
 		{
-			for (y = 0 ; y < x ; y++)
+			space = size - r;
+			hash = r;
+
+			for (i = 0 ; i < space ; i++)
 			{
 				_putchar(' ');
 			}
 
-			_putchar('#');
+			for (i = 0 ; i < hash ; i++)
+			{
+				_putchar('#');
+			}
+			
 			_putchar('\n');
 		}
 	}
