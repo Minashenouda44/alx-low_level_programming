@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	unsigned long f = 0, s = 1, n, es;
+	unsigned long f = 0, s = 1, n, es = 0;
 
 	while (1)
 	{
