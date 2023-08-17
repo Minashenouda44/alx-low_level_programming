@@ -9,15 +9,15 @@
 int main(void)
 {
 	int i;
-	long f = 1, s = 2, n = 0;
+	long long f = 1, s = 2, n = 0;
 
-	printf("%ld, %ld, ", f, s);
+	printf("%lld, %lld, ", f, s);
 
 	for (i = 2 ; i < 98 ; i++)
 	{
 		n = f + s;
 
-		printf("%ld", n);
+		printf("%lld", n);
 
 		f = s;
 		s = n;
