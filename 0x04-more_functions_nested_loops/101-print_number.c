@@ -11,7 +11,6 @@ void print_number(int n)
 	unsigned int no = n;
 
 	if (no < 0)
-
 	{
 		_putchar('-');
 		no = -no;
