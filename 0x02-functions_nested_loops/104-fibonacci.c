@@ -11,7 +11,7 @@ int main(void)
 	int i;
 	unsigned long f = 1, s = 2, n = 0;
 
-	printf("%ld, %ld. ", f, s);
+	printf("%ld, %ld, ", f, s);
 
 	for (i = 2 ; i < 98 ; i++)
 	{
