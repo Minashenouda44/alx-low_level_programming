@@ -11,13 +11,13 @@ int main(void)
 	int i;
 	unsigned long f = 1, s = 2, n = 0;
 
-	printf("%lu, %lu, ", f, s);
+	printf("%ld, %ld, ", f, s);
 
 	for (i = 2 ; i < 98 ; i++)
 	{
 		n = f + s;
 
-		printf("%lu", n);
+		printf("%ld", n);
 
 		f = s;
 		s = n;
