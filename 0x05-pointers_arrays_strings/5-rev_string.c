@@ -21,7 +21,7 @@ void rev_string(char *s)
 		l++;
 	}
 
-	*end = l - 1;
+	end = s + l - 1;
 
 	while (start < end)
 	{
