@@ -3,17 +3,17 @@
 /**
  * factorial - a function that returns the factorial of a given number.
  * @n: integer
- * Return: 0 success -1 error
+ * Return: 1 success -1 error
  */
 
 int factorial(int n)
 {
 	if (n < 0)
 		return (-1);
-	
+
 	if (n == 0)
-		return (0);
-	
+		return (1);
+
 	return (n * factorial(n - 1));
 }
 
