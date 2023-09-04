@@ -10,7 +10,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i;
+	unsigned int i;
 	char *p;
 
 	p = malloc((strlen(s1) + strlen(s2)) * sizeof(char) + 1);
