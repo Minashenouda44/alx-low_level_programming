@@ -17,11 +17,10 @@ char *str_concat(char *s1, char *s2)
 	if (p == 0)
 		return (0);
 
-	if (s1 == 0 && s2 == 0)
-		return (0);
-
-	strcpy(p, s1);
-	strcat(p, s2);
+	if (s1 != 0)
+		strcpy(p, s1);
+	if (s2 != 0)
+		strcat(p, s2);
 
 	return (p);
 }
