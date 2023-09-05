@@ -10,8 +10,8 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int l1;
-	int l2;
+	int l1 = 0;
+	int l2 = 0;
 	int i;
 	char *p;
 
