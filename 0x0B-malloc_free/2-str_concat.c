@@ -15,8 +15,8 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	char *p;
 
-	s1 = (s1 != 0) ? s1 : 0;
-	s2 = (s2 != 0) ? s2 : 0;
+	s1 = (s1 != 0) ? s1 : '\0';
+	s2 = (s2 != 0) ? s2 : '\0';
 
 	l1 = (s1 != 0) ? strlen(s1) : 0;
 	l2 = (s2 != 0) ? strlen(s2) : 0;
