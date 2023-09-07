@@ -23,24 +23,21 @@ void _puts(char *s)
 
 int _atoi(char *s)
 {
-	int result = 0;
 	int sign = 1;
+	unsigned long int i, fdigit, r = 0;
 
-	if (*s == '-')
+	for (fdigit = 0 ; !(s[fdigit] >= 48 && s[fdigit] <= 57) ; fdigit++)
 	{
-		sign = -1;
-		s++;
+		if (s[fdigit] == '-')
+			sign = -1;
 	}
-	else if (*s == '+')
-		s++;
-
-	while (*s >= '0' && *s <= '9')
+	for (i = fdigit ; s[i] >= 48 && s[i] <= 57 ; i++)
 	{
-		result = result * 10 + (*s - '0');
-		s++;
+		r *= 10;
+		r += (s[i] - 48);
 	}
 
-	return (sign * result);
+	return (sign * r);
 }
 
 /**
