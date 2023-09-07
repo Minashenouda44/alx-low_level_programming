@@ -55,10 +55,11 @@ void print_mul(unsigned long int n)
 
 	for (i = 0 ; n / d > 9 ; i++, d *= 10)
 		;
-	for (; d >= 1 ; n % d, d /= 10)
+	for (; d >= 1 ; d /= 10)
 	{
 		r = n / d;
 		_putchar('0' + r);
+		n %= d;
 	}
 }
 
