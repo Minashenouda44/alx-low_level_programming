@@ -1,62 +1,84 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * _puts - print string
+ * @s: string
+ * Return: void
+ */
+
+void _puts(char *s)
+{
+	int i;
+
+	for (i = 0 ; s[i] != '\0' ; i++)
+		_putchar(s[i]);
+}
 
 /**
- * main - a program that multiplies two positive numbers.
- * @mul: multiplication
- * @num1: 1st no
- * @num2: 2nd no
+ * _atoi - convert string to integer
+ * @s: string
+ * Return: integer
+ */
+
+int _atoi(char *s)
+{
+	int result = 0;
+	int sign = 1;
+
+	if (*s == '-')
+	{
+		sign = -1;
+		s++;
+	}
+	else if (*s == '+')
+		s++;
+
+	while (*s >= '0' && *s <= '9')
+	{
+		result = result * 10 + (*s - '0');
+		s++;
+	}
+
+	return (sign * result);
+}
+
+/**
+ * print_mul - print the multiplication
+ * @n: int
  * Return: 0
  */
 
-/**
- * is_digit - check for digit char
- * @c: char
- * Return: c
- */
-
-int is_digit(char c)
+void print_mul(unsigned long int n)
 {
-	if (c >= '0' && c <= '9')
-		return (c);
+	unsigned long int i, r, d = 1;
+
+	for (i = 0 ; n / d > 9 ; i++, d *= 10)
+		;
+	for (; d >= 1 ; n % d, d /= 10)
+	{
+		r = n / d;
+		_putchar('0' + r);
+	}
 }
+
+
+/**
+ * main - a program that multiplies two positive numbers.
+ * @argc: count
+ * @argv: values
+ * Return: 0
+ */
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int mul;
-
 	if (argc != 3)
 	{
-		printf("Error\n");
-		return (98);
+		_puts("Error ");
+		exit(98);
 	}
-
-	char *num1 = argv[1];
-	char *num2 = argv[2];
-
-	for (i = 0 ; num1[i] != '\0' ; i++)
-	{
-		if (!is_digit(num1[i]))
-		{
-			printf("Error\n");
-			return (98);
-		}
-	}
-
-	for (i = 0 ; num2[i] != '\0' ; i++)
-	{
-		if (!is_digit(num2[i]))
-		{
-			printf("Error\n");
-			return (98);
-		}
-	}
-
-	mul = atoi(num1) * atoi(num2);
-
-	printf("%d\n", mul);
+	print_mul(_atoi(argv[1]) * _atoi(argv[2]));
+	_putchar('\n');
 
 	return (0);
 }
