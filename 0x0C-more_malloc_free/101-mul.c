@@ -21,7 +21,7 @@ void _puts(char *s)
  * Return: integer
  */
 
-int _atoi(char *s)
+int _atoi(const char *s)
 {
 	int sign = 1;
 	unsigned long int i, fdigit, r = 0;
@@ -68,7 +68,7 @@ void print_mul(unsigned long int n)
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
 	if (argc != 3)
 	{
