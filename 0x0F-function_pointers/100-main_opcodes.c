@@ -30,8 +30,9 @@ int main(int argc, char *argv[])
 
 	for (i = 0 ; i < number_of_bytes ; i++)
 	{
-		printf("%02hhx%s", ptr[i], number_of_bytes ? " " : "\n");
+		printf("%02x ", ptr[i]);
 	}
+	printf("\n");
 
 	return (0);
 }
