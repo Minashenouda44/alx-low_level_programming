@@ -10,4 +10,28 @@
 
 int main(int argc, char *argv[])
 {
-	if (
+	int i;
+	unsigned char *ptr = (unsigned char *)main;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	int number_of_bytes = atoi(argv[1]);
+
+	if (number_of_bytes < 0)
+	{
+		printf("Error\n");
+		return (2);
+	}
+
+	for (i = 0 ; i < number_of_bytes ; i++)
+	{
+		printf("%02x", ptr[i]);
+	}
+	printf("\n");
+
+	return (0);
+}
