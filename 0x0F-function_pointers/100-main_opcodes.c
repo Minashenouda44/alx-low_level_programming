@@ -11,7 +11,8 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	unsigned char *ptr = (unsigned char *)main;
+	char *ptr = (char *)main;
+	int number_of_bytes;
 
 	if (argc != 2)
 	{
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int number_of_bytes = atoi(argv[1]);
+	number_of_bytes = atoi(argv[1]);
 
 	if (number_of_bytes < 0)
 	{
@@ -29,9 +30,8 @@ int main(int argc, char *argv[])
 
 	for (i = 0 ; i < number_of_bytes ; i++)
 	{
-		printf("%02hhx ", ptr[i]);
+		printf("%02hhx%s", ptr[i], number_of_bytes ? " " : "\n");
 	}
-	printf("\n");
 
 	return (0);
 }
