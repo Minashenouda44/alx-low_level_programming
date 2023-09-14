@@ -32,8 +32,8 @@ void print_all(const char * const format, ...)
 			else
 				printf("(nil)");
 		}
-
-		printf(", ");
+		if (format[i + 1])
+			printf(", ");
 		i++;
 	}
 	printf("\n");
