@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_listint - a function that returns the sum of all the data (n) of linked list.
+ * sum_listint - a function returns the sum of all the data of linked list.
  * @head: point to 1st node
  * Return: sum
  */
