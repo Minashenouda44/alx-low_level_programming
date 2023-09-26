@@ -4,7 +4,7 @@
  * get_nodeint_at_index -  a function that returns the nth node of linked list.
  * @head: point to 1st node
  * @index: node position
- * Return: 
+ * Return: temp
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
