@@ -7,7 +7,7 @@
  * Return: 1 success -1 failure
  */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int file_descriptor;
 	int text_length;
@@ -19,6 +19,12 @@ int create_file(const char *filename, char *text_content)
 	file_descriptor = open(filename, O_APPEND);
 	if (file_descriptor == -1)
 		return (-1);
+
+	if (text_content == NULL)
+	{
+		close(file_descriptor);
+		return (1);
+	}
 
 	text_length = strlen(text_content);
 
