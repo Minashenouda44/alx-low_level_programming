@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_file - Create a function that creates a file.
+ * append_text_to_file - a function that appends text at the end of a file.
  * @filename: pointer 2 file name
  * @text_content: content
  * Return: 1 success -1 failure
@@ -23,7 +23,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 	{
 		close(file_descriptor);
-		return (1);
+		return (-1);
 	}
 
 	text_length = strlen(text_content);
