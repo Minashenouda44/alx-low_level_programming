@@ -32,11 +32,11 @@ int create_file(const char *filename, char *text_content)
 		close(file_descriptor);
 		return (-1);
 	}
-	if (text_written != text_length)
+	/*if (text_written != text_length)
 	{
 		close(file_descriptor);
 		return (-1);
-	}
+	}*/
 	close(file_descriptor);
 	return (1);
 }
